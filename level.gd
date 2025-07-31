@@ -29,7 +29,25 @@ func placePortal(portal : Node2D) -> void:
 	if downC.is_colliding():
 		portal.position = off/2+downC.get_collision_point()
 	
+	portal.body_entered.connect(entered_portal)
+	
+	portal.id = pHandle.get_child_count()
+	print(pHandle.get_child_count())
+	if((pHandle.get_child_count()&1) == 1):
+		portal.to = portal.id-1
+		pHandle.get_child(portal.id-1).to = portal.id
 	add_child(portal)
+
+func entered_portal(body: Node2D, to: int, rot: float, off : Vector2) -> void:
+	print(to)
+	if to == -1 or "noPortal" in body or body is TileMapLayer:
+		return;
+	var toP = pHandle.get_child(to)
+	var angDiff = angle_difference(toP.rotation,rot)
+	off = off.rotated(angDiff)
+	body.velocity = body.velocity.rotated(angDiff)
+	body.position = toP.position + off
+	
 
 func _ready() -> void:
 	var player = playerScene.instantiate()

@@ -59,4 +59,6 @@ rotation = 3.14159
 scale = Vector2(2, -2)
 sprite_frames = SubResource("SpriteFrames_w8rct")
 autoplay = "default"
-frame_progress = 0.729429
+frame_progress = 0.0711655
+
+[connection signal="body_entered" from="portalArea" to="." method="_on_portal_area_body_entered"]
