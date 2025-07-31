@@ -1,28 +1,32 @@
-[gd_scene load_steps=9 format=3 uid="uid://beafl8stuff8j"]
+[gd_scene load_steps=10 format=3 uid="uid://beafl8stuff8j"]
 
 [ext_resource type="Script" uid="uid://bv2d218kpgfmk" path="res://portal.gd" id="1_0r486"]
-[ext_resource type="Texture2D" uid="uid://3cw6fb6uqimq" path="res://portals.png" id="2_ef3v5"]
+[ext_resource type="Texture2D" uid="uid://buggh2tb01sp0" path="res://portalgif-ezgif.com-gif-to-sprite-converter.png" id="2_ef3v5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ef3v5"]
-size = Vector2(17.5, 128)
+size = Vector2(54.6667, 111.667)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_grrij"]
 atlas = ExtResource("2_ef3v5")
-region = Rect2(0, 0, 16, 64)
+region = Rect2(1, 0, 32, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6r214"]
 atlas = ExtResource("2_ef3v5")
-region = Rect2(16, 0, 16, 64)
+region = Rect2(35, 0, 32, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2pgh4"]
 atlas = ExtResource("2_ef3v5")
-region = Rect2(32, 0, 16, 64)
+region = Rect2(69, 0, 32, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wtc1a"]
 atlas = ExtResource("2_ef3v5")
-region = Rect2(48, 0, 16, 64)
+region = Rect2(103, 0, 32, 34)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_w8rct"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8rct"]
+atlas = ExtResource("2_ef3v5")
+region = Rect2(137, 0, 32, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r8kna"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -36,6 +40,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wtc1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8rct")
 }],
 "loop": true,
 "name": &"default",
@@ -50,15 +57,15 @@ script = ExtResource("1_0r486")
 scale = Vector2(1.2, 1.2)
 
 [node name="portalShape" type="CollisionShape2D" parent="portalArea"]
-position = Vector2(8.25, 0)
+position = Vector2(26.8333, 1.98682e-06)
 shape = SubResource("RectangleShape2D_ef3v5")
 
 [node name="portalSprite" type="AnimatedSprite2D" parent="portalArea"]
-position = Vector2(16, 0)
-rotation = 3.14159
-scale = Vector2(2, -2)
-sprite_frames = SubResource("SpriteFrames_w8rct")
+position = Vector2(55.6488, 0.0458281)
+rotation = 4.71239
+scale = Vector2(3.99996, -3.96607)
+sprite_frames = SubResource("SpriteFrames_r8kna")
 autoplay = "default"
-frame_progress = 0.0711655
+frame_progress = 0.4978
 
 [connection signal="body_entered" from="portalArea" to="." method="_on_portal_area_body_entered"]
