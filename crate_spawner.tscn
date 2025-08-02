@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=3 uid="uid://ddjhisdqp6cam"]
+
+[ext_resource type="Texture2D" uid="uid://xbkd45jg3gkb" path="res://crateSpawner.png" id="1_w8tm7"]
+[ext_resource type="Script" uid="uid://pmqaljwkh4ew" path="res://crate_spawner.gd" id="2_hootj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmomr"]
+atlas = ExtResource("1_w8tm7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udb7c"]
+atlas = ExtResource("1_w8tm7")
+region = Rect2(33, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3drk3"]
+atlas = ExtResource("1_w8tm7")
+region = Rect2(66, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oo25n"]
+atlas = ExtResource("1_w8tm7")
+region = Rect2(99, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpwdi"]
+atlas = ExtResource("1_w8tm7")
+region = Rect2(132, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nqt0"]
+atlas = ExtResource("1_w8tm7")
+region = Rect2(165, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4isr5"]
+atlas = ExtResource("1_w8tm7")
+region = Rect2(198, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b57ui"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bmomr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udb7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3drk3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oo25n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bpwdi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nqt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4isr5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="crateSpawner" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_b57ui")
+script = ExtResource("2_hootj")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

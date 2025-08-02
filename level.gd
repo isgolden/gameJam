@@ -7,6 +7,8 @@ extends Node2D
 
 var playerScene := preload("res://player.tscn")
 var portalScene := preload("res://portal.tscn")
+var crateScene := preload("res://crate.tscn")
+var antiCrateScene := preload("res://anti_crate.tscn")
 
 func placePortal(portal : Node2D) -> void:
 	var pS = portal.get_node("portalArea/portalShape").get_shape().get_rect().size
@@ -56,3 +58,9 @@ func _ready() -> void:
 	var player = playerScene.instantiate()
 	player.placePortal.connect(placePortal);
 	add_child(player)
+	var testCrate := crateScene.instantiate()
+	testCrate.position.x += 100
+	add_child(testCrate)
+	var tACrate := antiCrateScene.instantiate()
+	tACrate.position.x += 500
+	add_child(tACrate)

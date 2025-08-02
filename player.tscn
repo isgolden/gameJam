@@ -20,7 +20,7 @@ shape = SubResource("RectangleShape2D_hqtel")
 zoom = Vector2(0.5, 0.5)
 
 [node name="shootCast" type="RayCast2D" parent="."]
-target_position = Vector2(2000, 0)
+target_position = Vector2(10000, 0)
 collision_mask = 2
 
 [node name="portalEnter" type="Timer" parent="."]

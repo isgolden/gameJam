@@ -6,6 +6,7 @@ var lastPortal : int = -1
 
 var portalScene = preload("res://portal.tscn")
 
+@onready var size = $playerShape.get_shape().get_rect().size
 @onready var vSize = get_viewport().get_visible_rect().size
 
 @onready var shootRay = $shootCast
