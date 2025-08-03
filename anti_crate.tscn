@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://ctjftt8e1ukoi"]
 
-[ext_resource type="Script" uid="uid://cx35wkyhrwfr" path="res://anti_crate.gd" id="1_ywn0n"]
-[ext_resource type="Texture2D" uid="uid://crfckcdkoe4u8" path="res://antiCrate.png" id="2_ywn0n"]
+[ext_resource type="Script" path="res://anti_crate.gd" id="1_ywn0n"]
+[ext_resource type="Texture2D" uid="uid://crfckcdkoe4u8" path="res://Sprites/antiCrate.png" id="2_ywn0n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_krpwo"]
 atlas = ExtResource("2_ywn0n")

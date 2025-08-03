@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnrjxb31txwpq"
-path="res://.godot/imported/Box.png-029e380f7996de360779b8755098dc02.ctex"
+uid="uid://crfckcdkoe4u8"
+path="res://.godot/imported/antiCrate.png-778d544c48ad9c049c5a68d2b2a12b34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Box.png"
-dest_files=["res://.godot/imported/Box.png-029e380f7996de360779b8755098dc02.ctex"]
+source_file="res://Sprites/antiCrate.png"
+dest_files=["res://.godot/imported/antiCrate.png-778d544c48ad9c049c5a68d2b2a12b34.ctex"]
 
 [params]
 

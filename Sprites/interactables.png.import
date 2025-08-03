@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xbkd45jg3gkb"
-path="res://.godot/imported/crateSpawner.png-095fdd3c42ae7bac2301211c1755d536.ctex"
+uid="uid://dtlvtmi8w8tt1"
+path="res://.godot/imported/interactables.png-481a1b9f1cb10c2a8c79a9f61491959f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://crateSpawner.png"
-dest_files=["res://.godot/imported/crateSpawner.png-095fdd3c42ae7bac2301211c1755d536.ctex"]
+source_file="res://Sprites/interactables.png"
+dest_files=["res://.godot/imported/interactables.png-481a1b9f1cb10c2a8c79a9f61491959f.ctex"]
 
 [params]
 
